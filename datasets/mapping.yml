@@ -1,0 +1,41 @@
+Insert Broker__c:
+  sf_object: Broker__c
+  table: Broker__c
+  fields:
+    Id: sf_id
+    Name: Name
+    Broker_Id__c: Broker_Id__c
+    Email__c: Email__c
+    Mobile_Phone__c: Mobile_Phone__c
+    Phone__c: Phone__c
+    Picture__c: Picture__c
+    Title__c: Title__c
+Insert Property__c:
+  sf_object: Property__c
+  table: Property__c
+  fields:
+    Id: sf_id
+    Name: Name
+    Address__c: Address__c
+    Assessed_Value__c: Assessed_Value__c
+    Baths__c: Baths__c
+    Beds__c: Beds__c
+    City__c: City__c
+    Date_Agreement__c: Date_Agreement__c
+    Date_Closed__c: Date_Closed__c
+    Date_Contracted__c: Date_Contracted__c
+    Date_Listed__c: Date_Listed__c
+    Date_Pre_Market__c: Date_Pre_Market__c
+    Description__c: Description__c
+    Picture__c: Picture__c
+    Price_Sold__c: Price_Sold__c
+    Price__c: Price__c
+    State__c: State__c
+    Status__c: Status__c
+    Tags__c: Tags__c
+    Thumbnail__c: Thumbnail__c
+    Title__c: Title__c
+    Zip__c: Zip__c
+  lookups:
+    Broker__c:
+      table: Broker__c

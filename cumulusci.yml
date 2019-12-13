@@ -40,7 +40,12 @@ flows:
         steps:
             3:
                 task: permset_dreamhouse
+            4:
+                task: load_dataset
     config_qa:
         steps:
             3:
                 task: permset_dreamhouse
+            4:
+                task: load_dataset
+
