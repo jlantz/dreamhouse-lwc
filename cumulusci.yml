@@ -1,0 +1,51 @@
+minimum_cumulusci_version: '3.2.0'
+project:
+    name: dreamhouse-lwc
+    package:
+        name:  Dreamhouse LWC
+        api_version: '47.0'
+    test:
+        name_match: 'Test%'
+    source_format: sfdx
+
+tasks:
+    permset_dreamhouse:
+        group: Dreamhouse
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: "force:user:permset:assign -n dreamhouse"
+
+    robot:
+        options:
+            suites: robot/dreamhouse-lwc/tests
+            options:
+                outputdir: robot/dreamhouse-lwc/results
+
+    robot_testdoc:
+        options:
+            path: robot/dreamhouse-lwc/tests
+            output: robot/dreamhouse-lwc/doc/dreamhouse-lwc_tests.html
+
+
+flows:
+    config_dev:
+        steps:
+            3:
+                task: permset_dreamhouse
+    config_apextest:
+        steps:
+            3:
+                task: permset_dreamhouse
+    config_managed:
+        steps:
+            3:
+                task: permset_dreamhouse
+            4:
+                task: load_dataset
+    config_qa:
+        steps:
+            3:
+                task: permset_dreamhouse
+            4:
+                task: load_dataset
+
